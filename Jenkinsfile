@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Build Archive') {
+      steps {
+        archiveArtifacts(fingerprint: true, artifacts: 'webapp/target/*.war')
+      }
+    }
+
   }
 }
