@@ -15,7 +15,7 @@ pipeline {
 
     stage('Copy') {
       steps {
-        copyArtifacts(projectName: 'Node1-TestJob', fingerprintArtifacts: true, target: 'target/')
+        realtimeJUnit(testResults: 'target/webapp/*.xml')
       }
     }
 
