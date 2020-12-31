@@ -13,11 +13,5 @@ pipeline {
       }
     }
 
-    stage('Copy') {
-      steps {
-        realtimeJUnit(testResults: 'target/webapp/*.xml')
-      }
-    }
-
   }
 }
